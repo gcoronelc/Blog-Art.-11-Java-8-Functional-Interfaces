@@ -21,6 +21,8 @@ public class Prueba01 {
     lista.add("Cesar");
     lista.add("Ernesto");
 
+    System.out.println(lista);
+    
     Collections.sort(lista, new Comparator<String>() {
 
       @Override

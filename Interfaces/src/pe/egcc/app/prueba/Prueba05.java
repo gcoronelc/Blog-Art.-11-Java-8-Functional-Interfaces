@@ -2,8 +2,6 @@ package pe.egcc.app.prueba;
 
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -13,28 +11,23 @@ import javax.swing.JOptionPane;
  * @author Eric Gustavo Coronel Castillo
  * @blog gcoronelc.blogspot.com
  */
-public class Prueba04 extends JFrame{
+public class Prueba05 extends JFrame{
   
   private JButton button;
 
-  public Prueba04() throws HeadlessException {
+  public Prueba05() throws HeadlessException {
     super("Demo Clásico");
     setLayout(new GridLayout(1, 1));
     setSize(200, 200);
     setLocationRelativeTo(null);
     button = new JButton("Saludar");
     add(button);
-    button.addActionListener(new ActionListener() {
-
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(rootPane, "Hola Gustavo.");
-      }
-    });
+    button.addActionListener( e -> 
+      JOptionPane.showMessageDialog(rootPane, "Hola Gustavo."));
   }
 
   public static void main(String[] args) {
-    Prueba04 bean = new Prueba04();
+    Prueba05 bean = new Prueba05();
     bean.setVisible(true);
   }
   
